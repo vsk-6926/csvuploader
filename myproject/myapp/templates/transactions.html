@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transactions</title>
+</head>
+<body>
+    <h1>Transactions - Health and Beauty</h1>
+    <table>
+        <tr>
+            <th>Invoice ID</th>
+            <th>Product Line</th>
+            <th>Unit Price</th>
+            <th>Quantity</th>
+            <th>Tax</th>
+            <th>Total</th>
+            <th>Date</th>
+            <th>Time</th>
+        </tr>
+        {% for transaction in transactions %}
+            <tr>
+                <td>{{ transaction.invoice_id }}</td>
+                <td>{{ transaction.product_line }}</td>
+                <td>{{ transaction.unit_price }}</td>
+                <td>{{ transaction.quantity }}</td>
+                <td>{{ transaction.tax }}</td>
+                <td>{{ transaction.total }}</td>
+                <td>{{ transaction.date }}</td>
+                <td>{{ transaction.time }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
